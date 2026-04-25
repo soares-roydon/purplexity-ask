@@ -4,6 +4,7 @@ import { GoogleGenAI } from "@google/genai"
 import { z } from "zod"
 import { zodToJsonSchema } from "zod-to-json-schema"
 import { PROMPT_TEMPLATE, SYSTEM_PROMPT } from "./prompt";
+import { prisma } from "./prisma/db"
 
 const client = tavily({ apiKey: process.env.TAVILY_API})
 const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API });
